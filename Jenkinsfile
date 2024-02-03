@@ -91,7 +91,7 @@ environment {
                 docker.withRegistry(registry, 'artifact-cred'){
                     app.push()
                 }    
-               echo '<--------------- Docker Publish Ended --------------->'  
+               echo '<--------------- Docker Publish Ended ------------------->'  
             }
         }
     }
