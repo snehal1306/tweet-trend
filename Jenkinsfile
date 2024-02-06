@@ -1,6 +1,6 @@
 def registry = 'https://sneh1306.jfrog.io/'
-def imageName = 'sneh1306.jfrog.io/docker-trial/ttrend'
-def version   = '2.2.0'
+'def imageName = 'sneh1306.jfrog.io/docker-trial/ttrend'
+def version   = '2.1.4''
 pipeline {
     agent {
         node {
@@ -74,7 +74,7 @@ environment {
                 }   
         }   
            
-    stage(" Docker Build ") {
+    'stage(" Docker Build ") {
       steps {
         script {
            echo '<--------------- Docker Build Started --------------->'
@@ -94,7 +94,7 @@ environment {
                echo '<--------------- Docker Publish Ended ------------------->'  
             }
         }
-    }
+    }'
     }
 
 }
