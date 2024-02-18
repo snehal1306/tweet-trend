@@ -2,7 +2,7 @@ def registry = 'https://sneh1306.jfrog.io/'
 pipeline {
     agent {
         node {
-            label 'maven'
+            label 'maven1'
         }
     }
 environment {
@@ -29,9 +29,11 @@ environment {
             }
             steps{
                 script{
+                    echo "----------starting sonar-----------"
                     withSonarQubeEnv('sneh-sonarqube-server'){
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
+                    echo "-----------ending sonar--------------"
                 }
             }
         }
